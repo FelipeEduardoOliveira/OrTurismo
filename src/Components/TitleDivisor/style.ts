@@ -6,6 +6,7 @@ export const ContainerHeader = styled.div`
   flex-direction: row;
   width: 100%;
   justify-content: center;
- font-size: 40px;
+  text-align: center;
+ font-size: 45px;
   padding: 40px 0px;
 `;

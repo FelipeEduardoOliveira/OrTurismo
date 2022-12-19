@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Container_Section from "../../Components/Containers/Section";
+import Form from "../../Components/Form";
 import TitleDivisor from "../../Components/TitleDivisor";
 import {
   AddressInfoContainer,
@@ -9,9 +10,25 @@ import {
 } from "./style";
 
 const Contacts = () => {
+  const whatsAppNumber = "551112345678";
+  const whatsAppText =
+    "Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20viagem!";
+  const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`;
+
   return (
     <ContainerContats>
       <TitleDivisor title="Contatos" />
+
+      <Container_Section
+        title="Ficou interessado? FALE CONOSCO"
+        subtitle={`Preencha o formulário abaixo para que possamos ajudá-lo da melhor forma ou nos envie pelo <a href=https://wa.me/${whatsAppNumber}?text=${whatsAppText} target='_blank'>WhatsApp</a>`}
+        invert={false}
+      />
+
+      <div style={{display:'flex', justifyContent:'space-around', alignItems: 'center'}}>
+        
+        <Form/>
+      </div>
 
       <ContainerAddress>
         <MapAddress>
@@ -29,12 +46,16 @@ const Contacts = () => {
         <AddressInfoContainer>
           <h1>Informações do endereço</h1>
           <address>
-            Email: <a href="mailto:leandrogounos@gmail.com ">leandrogounos@gmail.com </a>.<br />
+            Email:{" "}
+            <a href="mailto:leandrogounos@gmail.com ">
+              leandrogounos@gmail.com{" "}
+            </a>
+            .<br />
             <br />
-            Telefone:<a href="tel:11 4153-6472">11 4153-6472</a> 
+            Telefone:<a href="tel:11 4153-6472">11 4153-6472</a>
             <br />
-            Celular: <a href="tel:11 99516-7949">11 99516-7949</a> 
-            <br/>
+            Celular: <a href="tel:11 99516-7949">11 99516-7949</a>
+            <br />
             Alameda serra do cipó, 81 - Tamboré - Santana de Parnaíba
           </address>
         </AddressInfoContainer>

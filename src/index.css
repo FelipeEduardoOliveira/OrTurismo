@@ -2,6 +2,14 @@
   font-family: 'Bookman';
   src: local('Bookman'),url('./Font/bookman-old-style.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Roboto-light';
+  src: local('Roboto-light'),url('./Font/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NotoSans-Light';
+  src: local('NotoSans-Light'),url('./Font/NotoSans-Light.ttf') format('truetype');
+}
 
 *{
   
@@ -9,8 +17,7 @@
   padding: 0;
 }
   body {
-  font-family:'Bookman',
-    sans-serif;
+  font-family:'Roboto-light';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;

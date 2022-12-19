@@ -6,6 +6,9 @@ interface IMenu {
 interface IPropsMenuItem {
   selected: boolean;
 }
+interface IIconProps {
+  tamanho?: string;
+}
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -14,6 +17,15 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 20px 3%;
   justify-content: space-between;
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+`;
+export const Logotipo = styled.img`
+ width: 150px;
+`;
+export const Icon = styled.img<IIconProps>`
+ width: ${(props) => (props.tamanho ? props.tamanho : '30px')};
 `;
 export const NavigationContainer = styled.nav`
   display: flex;
@@ -33,7 +45,7 @@ export const MenuList = styled.ul<IMenu>`
     flex-direction: column;
     background-color: #eef8ff;
     position: absolute;
-    top: 138px;
+    top: 88px;
     width: 100%;
     right: 0;
     display: ${(props) => (props.disabled ? "none" : "flex")};
@@ -78,3 +90,24 @@ export const HamburguerMenu = styled.div`
     display: flex;
   }
 `;
+
+export const PhoneAndLogoContainer = styled.div`
+
+  display: flex;  
+  justify-content: space-around;
+  align-items: center;
+
+  div{
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+`
