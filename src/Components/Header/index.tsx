@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { HeaderContainer, NavigationContainer, MenuList, MenuItem, HamburguerMenu, Logotipo, PhoneAndLogoContainer, Icon } from "./style";
 import MenuIcon from '../../Assets/menu.png';
 import Logo from '../../Assets/Logo.png';
-import FacebookIcon from '../../Assets/facebookIcon.png';
+import InstaIcon from '../../Assets/instagram.png';
 import WhatsAppIcon from '../../Assets/whatsAppIcon.png';
 
 const Header = ()=>{
@@ -13,7 +13,7 @@ const Header = ()=>{
     const { pathname } = useLocation();
 
     const whatsAppNumber = '551112345678';
-    const whatsAppText = 'Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20viagem!';
+    const whatsAppText = 'Ol%C3%A1,%20tudo%20bem?%20N%C3%B3s%20da%20OR%20Rhormens%20Turismo%20ficamos%20muito%20felizes%20com%20o%20seu%20contato!%20Como%20podemos%20te%20ajudar%20hoje?';
     const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`
    
 
@@ -51,8 +51,9 @@ const Header = ()=>{
                 <div>
                     <p> 55 11 <strong>1234-5678</strong></p>
                     <p> <Icon src={WhatsAppIcon} tamanho='15px'/> <a href={whatAppLink} target='_blank'>11 1234-5678</a></p>
+                    <p> <a href='mailto:teste@teste.com' target='_blank'>teste@teste.com</a></p>
                 </div>
-                <Icon src={FacebookIcon} />
+                <Icon src={InstaIcon} />
              </PhoneAndLogoContainer>
         </HeaderContainer>
     )

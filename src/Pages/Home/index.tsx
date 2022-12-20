@@ -5,6 +5,7 @@ import HowItWork from '../../Components/Containers/HowItWork';
 import { Banner } from '../../Components/Containers/Banner';
 import { TitleBanner, SubtitleBanner, TextInitial } from './styled';
 import TitleDivisor from '../../Components/TitleDivisor';
+import HowDoesItWork from '../../Components/HowDoesItWork';
 
 
  const HomePage = () =>{
@@ -24,8 +25,9 @@ import TitleDivisor from '../../Components/TitleDivisor';
                 })
             } */}
             
-            <TextInitial>Somos a sua agência especializada em viagens personalizadas, com a missão de transformar o seu sonho em realidade e permitir que você viva essa experiência da melhor forma.</TextInitial>
+            {/* <TextInitial>Somos a sua agência especializada em viagens personalizadas, com a missão de transformar o seu sonho em realidade e permitir que você viva essa experiência da melhor forma.</TextInitial> */}
 
+<HowDoesItWork />
 
             {/* <HowItWork /> */}
             

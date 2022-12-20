@@ -28,7 +28,7 @@ const QuemSomos = () => {
         Não se trata de um mero agente de viagens, nem de um operador turístico. Esse profissional propõe experiências mais exclusivas e, quase sempre, a partir de uma recomendação pessoal de quem já vivenciou determinada atividade. Resumindo, também se trata de um curador altamente criativo e com capacidade de customização."
         invert={false}
       />
-      <Container_Section
+      {/* <Container_Section
         title="Como Funciona?"
         subtitle=""
         list={[
@@ -54,7 +54,7 @@ const QuemSomos = () => {
           },
         ]}
         invert={false}
-      />
+      /> */}
       <Container_Section
         title="FEEDBACK"
         subtitle="Após o seu retorno, lhe procurarei para saber como foi a sua viagem."

@@ -96,6 +96,7 @@ export const PhoneAndLogoContainer = styled.div`
   display: flex;  
   justify-content: space-around;
   align-items: center;
+  text-align: left;
 
   div{
     padding: 0 10px;
@@ -105,6 +106,11 @@ export const PhoneAndLogoContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  a{
+    
+    color: #000;
   }
 
   @media (max-width: 480px) {
