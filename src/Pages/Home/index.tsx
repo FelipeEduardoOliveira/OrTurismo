@@ -9,7 +9,7 @@ const HomePage = () => {
   const token = process.env.REACT_APP_INSTA_TOKEN;
 
   useEffect(()=>{
-    const env = process.env.NODE_ENV;
+    const env = process.env.REACT_APP_INSTA_TOKEN;
     console.log({env})
   },[])
 
