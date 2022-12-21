@@ -5,7 +5,7 @@ import { colors } from "../../utils/Colors";
 const Divisor = () => {
   return (
     <Divisor_main colors={colors}>
-      <p>We're open and available for takeaway & delivery. Order Now</p>
+      <p>Todos os direitos reservados para o site OR Rhormens Viagens e Turismo 2022-2025</p>
     </Divisor_main>
   );
 };
