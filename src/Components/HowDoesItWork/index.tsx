@@ -5,8 +5,8 @@ import { ContainerBanner, ContainerHowDoesItWork } from "./styled";
 
 const HowDoesItWork = () => {
   const renderCardBanner = () => {
-   return MockHowDoesItWork.map((item) => {
-      return <CardBanner key={item.title} item={item}/>;
+   return MockHowDoesItWork.map((item, index) => {
+      return <CardBanner key={item.title} item={item} className={`div${index}`}/>;
     });
   };
 

@@ -6,10 +6,24 @@ export const ContainerHowDoesItWork = styled.div`
 `;
 
 export const ContainerBanner = styled.div`
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, fr));
 
-  @media(max-width: 985px){
+  @media (min-width: 600px) {
+   grid-template-columns: repeat(2, 1fr); 
+}
+@media (min-width: 900px) {
+   grid-template-columns: repeat(4, 1fr); 
+}
+  /* .div0{
+    grid-row-start: 1;
+  grid-row-end: 3;
+  } */
+
+  @media (max-width: 985px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
