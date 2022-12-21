@@ -6,11 +6,11 @@ import FeedbackAvaliation from "../../Components/FeedbackAvaliation";
 
 const HomePage = () => {
 
-  const token = process.env.REACT_APP_INSTA_TOKEN;
 
   useEffect(()=>{
-    const env = process.env.REACT_APP_INSTA_TOKEN;
-    console.log({env})
+    const showAmbiente = process.env.NODE_ENV
+    const showToken = process.env.REACT_APP_LINK_API;
+    console.log({showAmbiente, showToken})
   },[])
 
   return (
