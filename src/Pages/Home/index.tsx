@@ -8,8 +8,8 @@ const HomePage = () => {
   return (
     <div>
       <Banner>
-        <TitleBanner>Rhormens</TitleBanner>
-        <SubtitleBanner>Uma viagem inteira pensando em você</SubtitleBanner>
+        {/* <TitleBanner>Rhormens</TitleBanner> */}
+        {/* <SubtitleBanner>Uma viagem inteira pensando em você</SubtitleBanner> */}
       </Banner>
 
       <HowDoesItWork />
