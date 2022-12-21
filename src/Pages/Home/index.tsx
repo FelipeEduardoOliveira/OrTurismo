@@ -6,6 +6,8 @@ import { Banner } from '../../Components/Containers/Banner';
 import { TitleBanner, SubtitleBanner, TextInitial } from './styled';
 import TitleDivisor from '../../Components/TitleDivisor';
 import HowDoesItWork from '../../Components/HowDoesItWork';
+import Cards from '../../Components/Card';
+import FeedbackAvaliation from '../../Components/FeedbackAvaliation';
 
 
  const HomePage = () =>{
@@ -28,6 +30,11 @@ import HowDoesItWork from '../../Components/HowDoesItWork';
             {/* <TextInitial>Somos a sua agência especializada em viagens personalizadas, com a missão de transformar o seu sonho em realidade e permitir que você viva essa experiência da melhor forma.</TextInitial> */}
 
 <HowDoesItWork />
+<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', overflow:'hidden'}}>
+<FeedbackAvaliation />
+</div>
+
+
 
             {/* <HowItWork /> */}
             

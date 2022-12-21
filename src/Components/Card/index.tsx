@@ -3,27 +3,33 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import Woman from '../../Assets/1431622.jpg'
-export default function Cards() {
+import { Box, CardActionArea, Rating } from '@mui/material';
+import Woman from '../../Assets/1431622.jpg';
+
+export default function Cards({data}:any) {
+
   return (
-    <Card sx={{ maxWidth: 345, margin: '20px' }}>
+    <Card sx={{ maxWidth: 345, margin: '20px'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={Woman}
-          alt="green iguana"
+          image={data.picture}
+          alt={data.name}
         />
         <CardContent >
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+        {`${data.title}`}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {data.description}
           </Typography>
+          {data.avaliation&&(
+           <Rating name="read-only" value={data.avaliation} readOnly />
+       )}
         </CardContent>
+
+      
       </CardActionArea>
     </Card>
   );
