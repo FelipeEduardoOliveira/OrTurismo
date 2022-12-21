@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import Button from "../Button";
 import Input from "../Input";
-import CheckboxInput from "./checkboxInput";
-import { interesseEmContato, tipoDeViajante } from "./question";
-
+import { ContainerForm, ContainerFormData, ContainerForm_01, ContainerForm_02 } from "./style";
 
 const Form = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [whatsApp, setWhatApp] = useState<string>("");
+  const [messageText, setMessageText] = useState<string>("");
 
   return (
-    <form style={{ width: "100%", maxWidth: "600px" }}>
-      <div>
-        <h1>Entrar em contato</h1>
+    <ContainerForm >
+      <h1>Entrar em contato</h1>
+
+      <ContainerFormData>
+      <ContainerForm_02>
         <Input
           onChange={(e: any) => setName(e)}
           name={"Nome"}
@@ -31,14 +33,22 @@ const Form = () => {
           value={whatsApp}
           placeholder={"WhatsApp"}
         />
-      </div>
+      </ContainerForm_02>
+      <ContainerForm_01>
+        <textarea id="message" name="message" placeholder="Escreva sua mensagem" rows={10} cols={50} spellCheck={true} value={messageText} onChange={(e:any)=>setMessageText(e.target.value)}>          
+        </textarea>
+      </ContainerForm_01>
+      </ContainerFormData>
 
-<CheckboxInput listData={interesseEmContato} Title={'Qual o seu interesse com o contato?'} />
-{/* <CheckboxInput listData={tipoDeViajante} Title={'Qual o seu interesse com o contato?'} /> */}
+      <Button title="Enviar" onClick={()=>console.log()} key={'Send-button'}/>
+
       
-      
-    </form>
+
+      {/* <CheckboxInput listData={interesseEmContato} Title={'Qual o seu interesse com o contato?'} /> */}
+      {/* <CheckboxInput listData={tipoDeViajante} Title={'Qual o seu interesse com o contato?'} /> */}
+    </ContainerForm>
   );
 };
 
 export default Form;
+ 
