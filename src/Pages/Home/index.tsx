@@ -1,45 +1,33 @@
-import React from 'react';
-import Container_Section from '../../Components/Containers/Section';
-import { renderContainers } from '../../utils/Containers';
-import HowItWork from '../../Components/Containers/HowItWork';
-import { Banner } from '../../Components/Containers/Banner';
-import { TitleBanner, SubtitleBanner, TextInitial } from './styled';
-import TitleDivisor from '../../Components/TitleDivisor';
-import HowDoesItWork from '../../Components/HowDoesItWork';
-import Cards from '../../Components/Card';
-import FeedbackAvaliation from '../../Components/FeedbackAvaliation';
+import React from "react";
+import { Banner } from "../../Components/Containers/Banner";
+import { TitleBanner, SubtitleBanner } from "./styled";
+import HowDoesItWork from "../../Components/HowDoesItWork";
+import FeedbackAvaliation from "../../Components/FeedbackAvaliation";
 
+const HomePage = () => {
+  return (
+    <div>
+      <Banner>
+        <TitleBanner>Rhormens</TitleBanner>
+        <SubtitleBanner>Uma viagem inteira pensando em você</SubtitleBanner>
+      </Banner>
 
- const HomePage = () =>{
-    return(
-        <div>
+      <HowDoesItWork />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          overflow: "hidden",
+        }}
+      >
+        <FeedbackAvaliation />
+      </div>
 
-            <Banner>
-                    <TitleBanner>Rhormens</TitleBanner>
-                    <SubtitleBanner>Uma viagem inteira pensando em você</SubtitleBanner>
-
-            </Banner>
-            {/* {
-                renderContainers.map((item: any)=>{
-                    return(
-                        <Container_Section title={item.title} subtitle={item.subtitle}  imagem={item.image} invert={item.invert}/>
-                    )
-                })
-            } */}
-            
-            {/* <TextInitial>Somos a sua agência especializada em viagens personalizadas, com a missão de transformar o seu sonho em realidade e permitir que você viva essa experiência da melhor forma.</TextInitial> */}
-
-<HowDoesItWork />
-<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', overflow:'hidden'}}>
-<FeedbackAvaliation />
-</div>
-
-
-
-            {/* <HowItWork /> */}
-            
-        </div>
-    )
-}
+      {/* <HowItWork /> */}
+    </div>
+  );
+};
 
 export default HomePage;

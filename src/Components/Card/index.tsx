@@ -3,8 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Box, CardActionArea, Rating } from '@mui/material';
-import Woman from '../../Assets/1431622.jpg';
+import { CardActionArea, Rating } from '@mui/material';
 
 export default function Cards({data}:any) {
 

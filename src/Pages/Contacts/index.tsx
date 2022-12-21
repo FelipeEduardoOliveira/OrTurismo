@@ -10,7 +10,7 @@ import {
 } from "./style";
 
 const Contacts = () => {
-  const whatsAppNumber = "551112345678";
+  const whatsAppNumber = "5511962913779";
   const whatsAppText =
     "Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20uma%20viagem!";
   const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`;
