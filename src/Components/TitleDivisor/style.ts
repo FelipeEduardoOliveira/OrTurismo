@@ -9,4 +9,5 @@ export const ContainerHeader = styled.div`
   text-align: center;
  font-size: 45px;
   padding: 40px 0px;
+  border-bottom: 1px solid silver;
 `;

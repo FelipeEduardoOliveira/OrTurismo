@@ -1,4 +1,5 @@
 import React from "react";
+import TitleDivisor from "../TitleDivisor";
 import CardBanner from "./Components";
 import { MockHowDoesItWork } from "./mock";
 import { ContainerBanner, ContainerHowDoesItWork } from "./styled";
@@ -12,6 +13,7 @@ const HowDoesItWork = () => {
 
   return (
     <ContainerHowDoesItWork>
+        <TitleDivisor title="Como funciona" />
       <ContainerBanner>
         {renderCardBanner()}
       </ContainerBanner>

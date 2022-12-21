@@ -5,10 +5,12 @@ import Header from '../Components/Header';
 import Contacts from '../Pages/Contacts';
 import HomePage from '../Pages/Home';
 import QuemSomos from '../Pages/QuemSomos';
-
+import WhatsIcon from '../Assets/whatsapp.png';
 
 const Rotas = () =>{
-
+    const whatsAppNumber = '551112345678';
+    const whatsAppText = 'Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20uma%20ajuda%20para%20o%20planejamento%20da%20minha%20viagem.';
+    const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`
     
 
     return(
@@ -24,6 +26,12 @@ const Rotas = () =>{
                 
                 <Route path='*' element={ <p>Not found page</p> } />
             </Routes>
+
+            <div style={{position:'fixed', bottom: '35px', right: '35px', zIndex:"999999", cursor:'pointer'}}>
+                <a href={whatAppLink} target='_blank'>
+                <img src={WhatsIcon} width={'65px'}/>
+                </a>
+            </div>
            
             <Divisor/>
         </BrowserRouter>

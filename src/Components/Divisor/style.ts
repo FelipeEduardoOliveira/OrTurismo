@@ -5,6 +5,8 @@ interface IColor {
 }
 
 export const Divisor_main = styled.div<IColor>`
+/* position: absolute;
+bottom: 0; */
   background-color: ${(props) => props.colors.gray};
   color: ${props => props.colors.white};
   font-size: 15px;

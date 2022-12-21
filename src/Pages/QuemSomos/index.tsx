@@ -13,7 +13,7 @@ const QuemSomos = () => {
         invert={false}
       />
 
-      <TitleDivisor title="DESIGN DE VIAGENS" />
+      <TitleDivisor title="Design de Viagens" />
 
       <Container_Section
         title="O que é?"
@@ -28,33 +28,6 @@ const QuemSomos = () => {
         Não se trata de um mero agente de viagens, nem de um operador turístico. Esse profissional propõe experiências mais exclusivas e, quase sempre, a partir de uma recomendação pessoal de quem já vivenciou determinada atividade. Resumindo, também se trata de um curador altamente criativo e com capacidade de customização."
         invert={false}
       />
-      {/* <Container_Section
-        title="Como Funciona?"
-        subtitle=""
-        list={[
-          {
-            title: "1° BATE PAPO",
-            text:
-              "Ao optar pelo serviço de personalização de viagens, a gente se conhece, você me explica seus objetivos e o que deseja e não deseja no seu roteiro. Pode ser uma viagem a dois, lua de mel, em família, com amigos, grupo, etc.",
-          },
-          {
-            title: "2° DESIGN DA SUA VIAGEM",
-            text:
-              "Buscarei os melhores fornecedores do turismo para a sua viagem ser no mínimo excelente. As melhores opções de aéreo, hotéis, passeios, etc, de acordo com o seu perfil e objetivos.",
-          },
-          {
-            title: "3° APRESENTAÇÃO DA PROPOSTA",
-            text:
-              "Apresento a melhor proposta de viagem para você. Se estiver de acordo, seguimos com o contrato e pagamento dos serviços de interesse.",
-          },
-          {
-            title: "4° VOCÊ VIAJA",
-            text:
-              "Você viaja e se diverte. Caso precise de qualquer suporte durante a viagem, poderá contar com nosso canal de atendimento 24 horas.",
-          },
-        ]}
-        invert={false}
-      /> */}
       <Container_Section
         title="FEEDBACK"
         subtitle="Após o seu retorno, lhe procurarei para saber como foi a sua viagem."

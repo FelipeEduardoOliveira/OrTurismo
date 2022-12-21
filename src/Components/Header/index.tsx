@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HeaderContainer, NavigationContainer, MenuList, MenuItem, HamburguerMenu, Logotipo, PhoneAndLogoContainer, Icon } from "./style";
+import { HeaderContainer, NavigationContainer, MenuList, MenuItem, HamburguerMenu, Logotipo} from "./style";
 import MenuIcon from '../../Assets/menu.png';
 import Logo from '../../Assets/Logo.png';
-import InstaIcon from '../../Assets/instagram.png';
-import WhatsAppIcon from '../../Assets/whatsAppIcon.png';
+import ContactsHeader from "../ContactsHeader";
 
 const Header = ()=>{
 
@@ -12,9 +11,7 @@ const Header = ()=>{
     
     const { pathname } = useLocation();
 
-    const whatsAppNumber = '551112345678';
-    const whatsAppText = 'Ol%C3%A1,%20tudo%20bem?%20N%C3%B3s%20da%20OR%20Rhormens%20Turismo%20ficamos%20muito%20felizes%20com%20o%20seu%20contato!%20Como%20podemos%20te%20ajudar%20hoje?';
-    const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`
+    
    
 
     useEffect(()=>{
@@ -25,6 +22,9 @@ const Header = ()=>{
     const [disabled, setDisabled] = useState(true);
 
     return(
+        <>
+        <ContactsHeader/>
+        
         <HeaderContainer>
              <div style={{display:'flex'}}>
              <Logotipo src={Logo}/>
@@ -46,16 +46,9 @@ const Header = ()=>{
                 
             </NavigationContainer>
              </div>
-
-             <PhoneAndLogoContainer>
-                <div>
-                    <p> 55 11 <strong>1234-5678</strong></p>
-                    <p> <Icon src={WhatsAppIcon} tamanho='15px'/> <a href={whatAppLink} target='_blank'>11 1234-5678</a></p>
-                    <p> <a href='mailto:teste@teste.com' target='_blank'>teste@teste.com</a></p>
-                </div>
-                <Icon src={InstaIcon} />
-             </PhoneAndLogoContainer>
         </HeaderContainer>
+        </>
+        
     )
 }
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerHowDoesItWork = styled.div`
   padding: 20px;
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
 `;
 
 export const ContainerBanner = styled.div`
@@ -49,6 +49,8 @@ export const IconContainer = styled.div`
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 9999;
+  border: 2px solid black;
+  border-bottom: none;
 `;
 export const CardLetterContainer = styled.div`
   position: relative;
