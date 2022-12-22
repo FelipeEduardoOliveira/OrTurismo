@@ -6,6 +6,7 @@ import Contacts from '../Pages/Contacts';
 import HomePage from '../Pages/Home';
 import QuemSomos from '../Pages/QuemSomos';
 import WhatsIcon from '../Assets/whatsapp.png';
+import Destinos from '../Pages/Destinos';
 
 const Rotas = () =>{
     const whatsAppNumber = '5511962913779';
@@ -23,6 +24,8 @@ const Rotas = () =>{
                 <Route path='/quem-somos' element={ <QuemSomos/> } />
             
                 <Route path='/contatos' element={ <Contacts/> } />
+                
+                <Route path='/destinos' element={ <Destinos/> } />
                 
                 <Route path='*' element={ <p>Not found page</p> } />
             </Routes>

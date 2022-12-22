@@ -1,21 +1,17 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import { Banner } from "../../Components/Containers/Banner";
-import { TitleBanner, SubtitleBanner } from "./styled";
 import HowDoesItWork from "../../Components/HowDoesItWork";
 import FeedbackAvaliation from "../../Components/FeedbackAvaliation";
-
+import background from '../../Assets/CapaBannerLarge.png'
 const HomePage = () => {
 
 
-  useEffect(()=>{
-    const showAmbiente = process.env.NODE_ENV
-    const showToken = process.env.REACT_APP_LINK_API;
-    console.log({showAmbiente, showToken})
-  },[])
+
 
   return (
     <div>
       <Banner>
+        <img src={background} />
         {/* <TitleBanner>Rhormens</TitleBanner> */}
         {/* <SubtitleBanner>Uma viagem inteira pensando em você</SubtitleBanner> */}
       </Banner>
