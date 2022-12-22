@@ -17,7 +17,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 20px 3%;
   justify-content: space-between;
-  @media (max-width: 480px) {
+  @media (max-width: 877px) {
     justify-content: center;
   }
 `;
