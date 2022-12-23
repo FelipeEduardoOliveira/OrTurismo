@@ -4,11 +4,8 @@ import styled from "styled-components";
 
 export const ContainerLoading = styled.div`
  
-  display: inline-block;
-  position: relative;
-  top: 5px;
-  width: 100%;
-  height: 100%;
+ position: relative;
+    left: -8%;
 
 div {
   position: absolute;

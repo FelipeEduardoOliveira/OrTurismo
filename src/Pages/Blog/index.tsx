@@ -14,9 +14,6 @@ const Blog = () => {
   const fields = "media_url,media_type,permalink,caption";
   const urlInsta = `https://graph.instagram.com/me/media?access_token=${tokenInsta}&fields=${fields}`;
 
-  const redirect = (item:any) =>{
-    <Link to='/post-details' state={item}/>
-  }
 
   const normalizeObject = (data: any) => {
     return {

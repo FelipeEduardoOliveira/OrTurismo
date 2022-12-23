@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import Input from "../Input";
 import { ContainerForm, ContainerFormData, ContainerForm_01, ContainerForm_02 } from "./style";
 
-const Form = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [whatsApp, setWhatApp] = useState<string>("");
-  const [messageText, setMessageText] = useState<string>("");
+const Form = ({name, setName, email, setEmail, phone, setPhone, message, setMessage}:any) => {
 
   
 
@@ -27,14 +23,14 @@ const Form = () => {
           placeholder={"Email"}
         />
         <Input
-          onChange={(e: any) => setWhatApp(e)}
+          onChange={(e: any) => setPhone(e)}
           name={"WhatsApp"}
-          value={whatsApp}
+          value={phone}
           placeholder={"WhatsApp *"}
         />
       </ContainerForm_02>
       <ContainerForm_01>
-        <textarea id="message" name="message" placeholder="Escreva sua mensagem *" rows={10} cols={50} spellCheck={true} value={messageText} onChange={(e:any)=>setMessageText(e.target.value)}>          
+        <textarea id="message" name="message" placeholder="Escreva sua mensagem *" rows={10} cols={50} spellCheck={true} value={message} onChange={(e:any)=>setMessage(e.target.value)}>          
         </textarea>
       </ContainerForm_01>
       </ContainerFormData>     
