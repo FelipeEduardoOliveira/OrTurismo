@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxContainerInput, IconDescription, InputCheckbox, TitleCheckbox } from "./style";
+import { CheckboxContainerInput, IconDescription, InputCheckbox, TitleCheckbox, TitleQuestions } from "./style";
 import InfoIcon from '../../Assets/info.png';
 import Tooltip from '@mui/material/Tooltip';
 interface IObjectToArray {
@@ -37,7 +37,7 @@ const CheckboxInput = ({ Title, listData }: IPropsCheckbox) => {
 
   return (
     <CheckboxContainerInput>
-      <h1>{Title}</h1>
+      <TitleQuestions>{Title}</TitleQuestions>
 
       <div style={{display:'flex', flexDirection:'column'}}>
 

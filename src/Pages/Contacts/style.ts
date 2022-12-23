@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const ContainerContats = styled.div`
-
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 padding: 20px 3%;
 `
 
@@ -17,7 +20,15 @@ justify-content: space-between;
 
 ` 
 export const FormContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
 width: 100%;
-height: 100vh;
-border: 1px solid red;
+`
+
+export const ContainerQuestions = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
 `
