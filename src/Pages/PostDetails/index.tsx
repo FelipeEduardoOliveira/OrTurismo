@@ -16,8 +16,8 @@ const data = location.state;
                 <img src={data.media_url} alt={'Imagem-da-noticia'}/>
             </ContainerImagem>
             <ContainerText>
-                <span>
-                    {data.caption}
+                <span dangerouslySetInnerHTML={{ __html: data.caption.replaceAll('\n\n', '<br/><br/>') }}>
+                    {/* {data.caption} */}
                 </span>
                 </ContainerText>
         </ContainerPost>
