@@ -32,7 +32,7 @@ const Blog = () => {
 
 
   const filterTypeMedia = (data:any) =>{
-      return data.filter((item:any) => item.media_type === 'IMAGE' && reservedWord.includes(item.caption.split('')[0]))
+      return data.filter((item:any) => item.media_type === 'IMAGE' && reservedWord.includes(item.caption.replaceAll('\n\n',' - ').split(' ')[0]))
   }
 
   const renderMock = () => {
@@ -40,7 +40,7 @@ const Blog = () => {
       return filterTypeMedia(dataInsta.data).map((item: any) => {
         // return <p>{item.permalink}</p>
         // console.log({item})
-        return <Link to='/post-details' state={item}><Cards data={normalizeObject(item)}/></Link>;
+        return <Link key={item.id} to='/post-details' state={item}><Cards key={item.id} data={normalizeObject(item)}/></Link>;
         // return <img src={item.media_url} width={'200px'} />
       });
     } else {
