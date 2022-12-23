@@ -12,10 +12,10 @@ import {
 const CardBanner = ({ item }: any) => {
   return (
     <ContainerCardBanner>
-      <IconContainer>
+      <IconContainer hexColor={item.hexColor}>
         <img src={item.icon} width={"62px"} height={"62px"} />
       </IconContainer>
-      <CardLetterContainer>
+      <CardLetterContainer linearColor={item.linearColor}>
         <CircleDesign/>
         <CircleDesignDegrade />
         <TitleCardBanner>{item.title ? item.title : ""}</TitleCardBanner>

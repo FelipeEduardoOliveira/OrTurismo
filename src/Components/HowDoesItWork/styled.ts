@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface IColor{
+  linearColor?: string
+  hexColor?: string
+}
+
 export const ContainerHowDoesItWork = styled.div`
   padding: 20px;
   /* background-color: cadetblue; */
@@ -39,7 +44,7 @@ export const ContainerCardBanner = styled.div`
   margin: 20px;
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.div<IColor>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,12 +54,13 @@ export const IconContainer = styled.div`
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 9999;
-  border: 2px solid black;
+  border: 2px solid ${props => props.hexColor};
   border-bottom: none;
 `;
-export const CardLetterContainer = styled.div`
+export const CardLetterContainer = styled.div<IColor>`
   position: relative;
-  background-color: orange;
+  /* background-color: orange; */
+  background-image: linear-gradient(${props => props.linearColor});
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
