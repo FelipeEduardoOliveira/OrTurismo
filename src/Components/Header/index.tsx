@@ -38,7 +38,7 @@ const Header = ()=>{
                 <MenuList disabled={disabled}>
                     <MenuItem selected={itemSelected === '/'}><Link to='/'>Home</Link></MenuItem>
                     <MenuItem selected={itemSelected === '/quem-somos'}><Link to='/quem-somos'>Quem somos</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/destinos'}><Link to='/destinos'>Destinos</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/blog'}><Link to='/blog'>Blog</Link></MenuItem>
                     <MenuItem selected={itemSelected === '/contatos'}><Link to='/contatos'>Contatos</Link></MenuItem>
                 </MenuList>
 
