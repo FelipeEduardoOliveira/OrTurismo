@@ -17,7 +17,7 @@ const CardBanner = ({ item }: any) => {
       </IconContainer>
       <CardLetterContainer linearColor={item.linearColor}>
         <CircleDesign/>
-        <CircleDesignDegrade />
+        {/* <CircleDesignDegrade /> */}
         <TitleCardBanner>{item.title ? item.title : ""}</TitleCardBanner>
         <TextCardBanner>{item.text ? item.text : ""}</TextCardBanner>
       </CardLetterContainer>
