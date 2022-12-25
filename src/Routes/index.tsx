@@ -17,7 +17,7 @@ const Rotas = () =>{
 
     return(
 
-        <BrowserRouter>
+        <BrowserRouter basename='/or.tur.br'>
         <Header/>
             <Routes>
                 <Route  path='/' element={ <HomePage/> } />
