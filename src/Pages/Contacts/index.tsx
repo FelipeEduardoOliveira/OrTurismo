@@ -32,6 +32,7 @@ const Contacts = () => {
   const [message, setMessage] = useState("");
   const [tripTime, setTripTime] = useState("");
   const [dateValue, setDateValue] = useState<Date | "">("");
+  const [backTrip, setBackTrip] = useState<Date | "">("");
   const [messageCheck, setmessageCheck] = useState([]);
   const [load, setLoad] =useState(false)
   const [showAlert, setShowAlert] = useState({
@@ -53,7 +54,7 @@ const Contacts = () => {
     phone_user: phone ? phone : "-",
     message: message ? message : "-",
     date_trip: dateValue ? dateValue : "-",
-    day_quantity: tripTime ? tripTime : "-",
+    back_trip: backTrip ? backTrip : "-",
     preference: messageCheck ? messageCheck : "-",
   };
 
@@ -154,13 +155,15 @@ const Contacts = () => {
                 value={dateValue}
                 setValue={setDateValue}
                 minDate={today}
-                title={"Dia da viagem"}
+                title={"Ida"}
+                disabled={false}
               />
-              <Input
-                onChange={(e: any) => setTripTime(e)}
-                name={"Tempo viagem"}
-                value={tripTime}
-                placeholder={"Dias que vai viajar"}
+              <DateInput
+                value={backTrip}
+                setValue={setBackTrip}
+                minDate={dateValue}
+                title={"Volta"}
+                disabled={!dateValue ? true : false}
               />
             </ContainerDataViagem>
           </ContainerPersonalizeMessage>

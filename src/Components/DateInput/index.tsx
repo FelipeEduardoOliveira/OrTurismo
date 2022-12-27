@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { DataContainer } from './styled';
 
-export default function BasicDatePicker({value, setValue, minDate, title}:any) {
+export default function BasicDatePicker({value, setValue, minDate, title, disabled}:any) {
 
   return (
     <DataContainer>
@@ -12,6 +12,7 @@ export default function BasicDatePicker({value, setValue, minDate, title}:any) {
         onChange={(e) => setValue(e.target.value)}
         min={minDate && minDate}
         id={'dataField'}
+        disabled={disabled}
     />
 
 
