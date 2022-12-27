@@ -10,6 +10,10 @@
   font-family: 'NotoSans-Light';
   src: local('NotoSans-Light'),url('./Font/NotoSans-Light.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'MonumentExtended';
+  src: local('MonumentExtended'),url('./Font/MonumentExtended-Light.ttf') format('truetype');
+}
 
 *{
   

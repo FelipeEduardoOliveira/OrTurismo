@@ -8,6 +8,7 @@ export const ContainerHeader = styled.div`
   justify-content: center;
   text-align: center;
  font-size: 45px;
+ font-family: MonumentExtended;
   padding: 40px 0px;
   border-bottom: 1px solid silver;
 `;

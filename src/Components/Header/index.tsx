@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HeaderContainer, NavigationContainer, MenuList, MenuItem, HamburguerMenu, Logotipo} from "./style";
 import MenuIcon from '../../Assets/menu.png';
 import Logo from '../../Assets/Logo.png';
@@ -10,9 +10,11 @@ const Header = ()=>{
     const [itemSelected, setItemSelected] = useState<string>('')
     
     const { pathname } = useLocation();
-
+    const navigate = useNavigate()
     
-   
+    const redirectHome = () =>{
+        navigate('/')
+    }
 
     useEffect(()=>{
         
@@ -27,7 +29,7 @@ const Header = ()=>{
         
         <HeaderContainer>
              <div style={{display:'flex'}}>
-             <Logotipo src={Logo}/>
+             <Logotipo src={Logo} onClick={()=>redirectHome()}/>
             <NavigationContainer>
                
             <HamburguerMenu onClick={() => setDisabled(!disabled)}>

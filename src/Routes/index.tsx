@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes, BrowserRouter} from 'react-router-dom'
+import {Route, Routes, BrowserRouter, HashRouter} from 'react-router-dom'
 import Divisor from '../Components/Divisor';
 import Header from '../Components/Header';
 import Contacts from '../Pages/Contacts';
@@ -17,9 +17,9 @@ const Rotas = () =>{
 
     return(
 
-        <BrowserRouter basename='/or.tur.br'>
+        <HashRouter>
         <Header/>
-            <Routes>
+            <Routes >
                 <Route  path='/' element={ <HomePage/> } />
             
                 <Route path='/quem-somos' element={ <QuemSomos/> } />
@@ -40,7 +40,7 @@ const Rotas = () =>{
             </div>
            
             <Divisor/>
-        </BrowserRouter>
+        </HashRouter>
     ); 
 }
 

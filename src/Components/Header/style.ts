@@ -23,6 +23,7 @@ export const HeaderContainer = styled.header`
 `;
 export const Logotipo = styled.img`
  width: 150px;
+ cursor: pointer;
 `;
 export const Icon = styled.img<IIconProps>`
  width: ${(props) => (props.tamanho ? props.tamanho : '30px')};
