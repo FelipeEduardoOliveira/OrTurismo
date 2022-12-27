@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 
 export const ContainerFirstHeader = styled.div`
+position: fixed;
+top: 0;
+width: 100%;
+background-color: white;
+z-index: 99999;
 padding: 10px 3%;
 display: flex;
 justify-content: space-around;

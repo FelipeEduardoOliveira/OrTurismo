@@ -16,9 +16,12 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   padding: 20px 3%;
+  margin-top: 39px;
   justify-content: space-between;
   @media (max-width: 877px) {
     justify-content: center;
+    margin-top: 0;
+    z-index: 9999;
   }
 `;
 export const Logotipo = styled.img`
@@ -50,6 +53,7 @@ export const MenuList = styled.ul<IMenu>`
     width: 100%;
     right: 0;
     display: ${(props) => (props.disabled ? "none" : "flex")};
+    z-index: 999999;
   }
 `;
 
