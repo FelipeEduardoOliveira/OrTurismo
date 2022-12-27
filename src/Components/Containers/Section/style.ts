@@ -51,6 +51,8 @@ width: 90%;
 font-size: 18px;
 color: ${props=>props.colors.lightBlue};
 font-family: 'NotoSans-Light';
+letter-spacing: 1px;
+line-height: 40px;
 `
 export const ButtonContainerSection = styled.div`
 padding: 20px 0px;

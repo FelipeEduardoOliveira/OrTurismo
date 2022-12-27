@@ -8,11 +8,12 @@ import ContactsHeader from "../ContactsHeader";
 const Header = ()=>{
 
     const [itemSelected, setItemSelected] = useState<string>('')
-    
+    const [disabled, setDisabled] = useState(true);
     const { pathname } = useLocation();
     const navigate = useNavigate()
     
     const redirectHome = () =>{
+        setDisabled(true)
         navigate('/')
     }
 
@@ -21,7 +22,7 @@ const Header = ()=>{
         setItemSelected(pathname)
     },[pathname]);
 
-    const [disabled, setDisabled] = useState(true);
+
 
     return(
         <>
@@ -29,7 +30,7 @@ const Header = ()=>{
         
         <HeaderContainer>
              <div style={{display:'flex'}}>
-             <Logotipo src={Logo} onClick={()=>{redirectHome(), setDisabled(!disabled)}}/>
+             <Logotipo src={Logo} onClick={()=>redirectHome()}/>
             <NavigationContainer>
                
             <HamburguerMenu onClick={() => setDisabled(!disabled)}>
@@ -38,10 +39,10 @@ const Header = ()=>{
             </HamburguerMenu>
 
                 <MenuList disabled={disabled}>
-                    <MenuItem selected={itemSelected === '/'} onClick={() => setDisabled(!disabled)}><Link to='/'>Home</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/quem-somos'} onClick={() => setDisabled(!disabled)}><Link to='/quem-somos'>Quem somos</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/blog'} onClick={() => setDisabled(!disabled)}><Link to='/blog'>Blog</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/contatos'} onClick={() => setDisabled(!disabled)}><Link to='/contatos'>Contatos</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/'} onClick={() => setDisabled(disabled ? false : true)}><Link to='/'>Home</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/quem-somos'} onClick={() => setDisabled(disabled ? false : true)}><Link to='/quem-somos'>Quem somos</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/blog'} onClick={() => setDisabled(disabled ? false : true)}><Link to='/blog'>Blog</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/contatos'} onClick={() => setDisabled(disabled ? false : true)}><Link to='/contatos'>Contatos</Link></MenuItem>
                 </MenuList>
 
                 
