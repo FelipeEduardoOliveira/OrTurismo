@@ -10,7 +10,7 @@ import Blog from '../Pages/Blog';
 import PostDetails from '../Pages/PostDetails';
 
 const Rotas = () =>{
-    const whatsAppNumber = '5511962913779';
+    const whatsAppNumber = '5511910859966';
     const whatsAppText = 'Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20uma%20ajuda%20para%20o%20planejamento%20da%20minha%20viagem.';
     const whatAppLink = `https://wa.me/${whatsAppNumber}?text=${whatsAppText}`
     
