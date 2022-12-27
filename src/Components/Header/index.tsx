@@ -29,7 +29,7 @@ const Header = ()=>{
         
         <HeaderContainer>
              <div style={{display:'flex'}}>
-             <Logotipo src={Logo} onClick={()=>redirectHome()}/>
+             <Logotipo src={Logo} onClick={()=>{redirectHome(), setDisabled(!disabled)}}/>
             <NavigationContainer>
                
             <HamburguerMenu onClick={() => setDisabled(!disabled)}>
@@ -38,10 +38,10 @@ const Header = ()=>{
             </HamburguerMenu>
 
                 <MenuList disabled={disabled}>
-                    <MenuItem selected={itemSelected === '/'}><Link to='/'>Home</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/quem-somos'}><Link to='/quem-somos'>Quem somos</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/blog'}><Link to='/blog'>Blog</Link></MenuItem>
-                    <MenuItem selected={itemSelected === '/contatos'}><Link to='/contatos'>Contatos</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/'} onClick={() => setDisabled(!disabled)}><Link to='/'>Home</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/quem-somos'} onClick={() => setDisabled(!disabled)}><Link to='/quem-somos'>Quem somos</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/blog'} onClick={() => setDisabled(!disabled)}><Link to='/blog'>Blog</Link></MenuItem>
+                    <MenuItem selected={itemSelected === '/contatos'} onClick={() => setDisabled(!disabled)}><Link to='/contatos'>Contatos</Link></MenuItem>
                 </MenuList>
 
                 
