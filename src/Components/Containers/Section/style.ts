@@ -29,6 +29,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
+padding: 20px 0 ;
 /* height: 100%; */
 @media (max-width: 877px) {
     width: 100%;
