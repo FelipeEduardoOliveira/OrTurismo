@@ -7,7 +7,8 @@ export const ContainerHeader = styled.div`
   width: 100%;
   justify-content: center;
   text-align: center;
- font-size: 45px;
+ font-size: 22px;
+ font-weight: bold;
  font-family: MonumentExtended;
   padding: 40px 0px;
   border-bottom: 1px solid silver;
