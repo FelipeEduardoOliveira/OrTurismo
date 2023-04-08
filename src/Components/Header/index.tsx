@@ -30,7 +30,7 @@ const Header = ()=>{
         
         <HeaderContainer>
              <div style={{display:'flex'}}>
-             <Logotipo src={Logo} onClick={()=>redirectHome()}/>
+             {/* <Logotipo src={Logo} onClick={()=>redirectHome()}/> */}
             <NavigationContainer>
                
             <HamburguerMenu onClick={() => setDisabled(!disabled)}>

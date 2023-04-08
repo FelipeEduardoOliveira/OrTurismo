@@ -19,17 +19,17 @@ export const HeaderContainer = styled.header`
   margin-top: 39px;
   justify-content: space-between;
   @media (max-width: 877px) {
-    justify-content: center;
+    justify-content: end;
     margin-top: 0;
     z-index: 9999;
   }
 `;
 export const Logotipo = styled.img`
- width: 150px;
- cursor: pointer;
+  width: 150px;
+  cursor: pointer;
 `;
 export const Icon = styled.img<IIconProps>`
- width: ${(props) => (props.tamanho ? props.tamanho : '30px')};
+  width: ${(props) => (props.tamanho ? props.tamanho : "30px")};
 `;
 export const NavigationContainer = styled.nav`
   display: flex;
@@ -97,13 +97,12 @@ export const HamburguerMenu = styled.div`
 `;
 
 export const PhoneAndLogoContainer = styled.div`
-
-  display: flex;  
+  display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: left;
 
-  div{
+  div {
     padding: 0 10px;
     font-size: 14px;
   }
@@ -113,12 +112,11 @@ export const PhoneAndLogoContainer = styled.div`
     justify-content: center;
   }
 
-  a{
-    
+  a {
     color: #000;
   }
 
   @media (max-width: 480px) {
     display: none;
   }
-`
+`;

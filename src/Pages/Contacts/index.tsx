@@ -4,7 +4,6 @@ import Form from "../../Components/Form";
 import CheckboxInput from "../../Components/Form/checkboxInput";
 import {
   interesseEmContato,
-  tipoDeViajante,
 } from "../../Components/Form/question";
 import TitleDivisor from "../../Components/TitleDivisor";
 import emailjs from "@emailjs/browser";
@@ -23,6 +22,7 @@ import { useEffect } from "react";
 import BasicAlerts from "../../Components/Alert";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../Components/Loading";
+import { IpropsAlert } from "../../utils/enums";
 
 const Contacts = () => {
   const [personalizeMensagem, setPersonalizeMensagem] = useState(false);
@@ -34,11 +34,11 @@ const Contacts = () => {
   const [dateValue, setDateValue] = useState<Date | "">("");
   const [backTrip, setBackTrip] = useState<Date | "">("");
   const [messageCheck, setmessageCheck] = useState([]);
-  const [load, setLoad] =useState(false)
-  const [showAlert, setShowAlert] = useState({
+  const [load, setLoad] = useState(false);
+  const [showAlert, setShowAlert] = useState<IpropsAlert>({
     open: false,
     message: "",
-    type: "",
+    type: "success",
   });
   const timeElapsed = Date.now();
   const today = new Date(timeElapsed).toISOString().split("T")[0];
@@ -71,7 +71,7 @@ const Contacts = () => {
     sendEmailContact();
   };
   const sendEmailContact = async () => {
-    setLoad(true)
+    setLoad(true);
     await emailjs
       .send(serviceID, templateID, templateParams, publicKey)
       .then((response) => {
@@ -86,7 +86,7 @@ const Contacts = () => {
           setShowAlert({
             open: false,
             message: "",
-            type: "",
+            type: "success",
           });
         }, 3000);
       })
@@ -101,22 +101,21 @@ const Contacts = () => {
           setShowAlert({
             open: false,
             message: "",
-            type: "",
+            type: "success",
           });
         }, 3000);
       });
 
-      setLoad(false)
+    setLoad(false);
   };
 
   return (
     <ContainerContats>
-     {load&&(
-       <Loader>
-
-       <Loading/>
-     </Loader>
-     )}
+      {load && (
+        <Loader>
+          <Loading />
+        </Loader>
+      )}
       <TitleDivisor title="Contatos" />
       <h1 style={{ padding: "10px 0" }}>Entrar em contato</h1>
       <FormContainer>

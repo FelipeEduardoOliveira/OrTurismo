@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-interface IColor{
-  linearColor?: string
-  hexColor?: string
+interface IColor {
+  linearColor?: string;
+  hexColor?: string;
 }
 
 export const ContainerHowDoesItWork = styled.div`
@@ -18,11 +18,11 @@ export const ContainerBanner = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, fr));
 
   @media (min-width: 600px) {
-   grid-template-columns: repeat(2, 1fr); 
-}
-@media (min-width: 900px) {
-   grid-template-columns: repeat(4, 1fr); 
-}
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
   /* .div0{
     grid-row-start: 1;
   grid-row-end: 3;
@@ -54,13 +54,13 @@ export const IconContainer = styled.div<IColor>`
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 9999;
-  border: 2px solid ${props => props.hexColor};
+  border: 2px solid ${(props) => props.hexColor};
   border-bottom: none;
 `;
 export const CardLetterContainer = styled.div<IColor>`
   position: relative;
   /* background-color: orange; */
-  background-image: linear-gradient(${props => props.linearColor});
+  background-image: linear-gradient(${(props) => props.linearColor});
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -100,4 +100,18 @@ export const TextCardBanner = styled.span`
   padding: 15px 0;
   letter-spacing: 1px;
   line-height: 26px;
+  font-size: 18px;
+`;
+
+export const ContainerNewLogo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  padding: 20px;
+  background-color: aliceblue;
+  color: black;
 `;

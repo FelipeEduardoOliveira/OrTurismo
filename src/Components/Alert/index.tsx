@@ -1,15 +1,11 @@
-import * as React from 'react';
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+import * as React from "react";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
+import { IpropsAlert } from "../../utils/enums";
 
-interface IpropsAlert{
-    message:string 
-    type:any
-}
-
-export default function BasicAlerts({message, type}:IpropsAlert) {
+export default function BasicAlerts({ message, type }: IpropsAlert) {
   return (
-    <Stack sx={{ width: '100%' }} spacing={2}>
+    <Stack sx={{ width: "100%", position: "fixed", top: "15%" }} spacing={2}>
       <Alert severity={type}>{message}</Alert>
       {/* <Alert severity="error">{This is an error alert — check it out!}</Alert> */}
       {/* <Alert severity="warning">This is a warning alert — check it out!</Alert> */}
