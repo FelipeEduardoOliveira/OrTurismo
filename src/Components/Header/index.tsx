@@ -65,28 +65,22 @@ const Header = () => {
                 <Link to="/contatos">Contatos</Link>
               </MenuItem>
               <MenuItem
-                selected={itemSelected === "/#"}
+                selected={itemSelected === "/formulario/passagens-aereas"}
                 onClick={() => setDisabled(disabled ? false : true)}
               >
-                <Link to="/#">Aereo</Link>
+                <Link to="/formulario/passagens-aereas">Aereo</Link>
               </MenuItem>
               <MenuItem
-                selected={itemSelected === "/#"}
+                selected={itemSelected === "/formulario/locacao-de-veiculos"}
                 onClick={() => setDisabled(disabled ? false : true)}
               >
-                <Link to="/#">Passagem aerea</Link>
+                <Link to="/formulario/locacao-de-veiculos">Locação de veiculo</Link>
               </MenuItem>
               <MenuItem
-                selected={itemSelected === "/#"}
+                selected={itemSelected === "/formulario/reserva-de-hoteis"}
                 onClick={() => setDisabled(disabled ? false : true)}
               >
-                <Link to="/#">Locação de veiculo</Link>
-              </MenuItem>
-              <MenuItem
-                selected={itemSelected === "/#"}
-                onClick={() => setDisabled(disabled ? false : true)}
-              >
-                <Link to="/#">Hotel</Link>
+                <Link to="/formulario/reserva-de-hoteis">Hotel</Link>
               </MenuItem>
             </MenuList>
           </NavigationContainer>
