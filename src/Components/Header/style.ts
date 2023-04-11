@@ -22,6 +22,10 @@ export const HeaderContainer = styled.header`
     justify-content: end;
     margin-top: 0;
     z-index: 9999;
+    div {
+      width: 100%;
+      justify-content: space-between
+    }
   }
 `;
 export const Logotipo = styled.img`
