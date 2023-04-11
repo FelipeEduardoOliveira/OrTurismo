@@ -12,6 +12,7 @@ import { useMonteSuaViagem } from "./useMonteSuaViagem.hook";
 import SelectInput from "../../../Components/SelectInput";
 import Button from "../../../Components/Button";
 import BasicAlerts from "../../../Components/Alert";
+import CheckboxInput from "../../../Components/Form/checkboxInput";
 
 const MonteSuaViagem = () => {
   const {
@@ -28,6 +29,9 @@ const MonteSuaViagem = () => {
     tipoDeViagemOptions,
     showAlert,
     showButtonLoad,
+    opcoesDePersonalizacao,
+    messageCheck,
+    setmessageCheck,
     setNome,
     setEmail,
     setWhatsApp,
@@ -41,10 +45,13 @@ const MonteSuaViagem = () => {
     setDataRetorno,
   } = useMonteSuaViagem();
 
+  React.useEffect(() => {
+    console.log({ messageCheck });
+  }, [messageCheck]);
   return (
     <>
       <ContainerForms>
-        <TitleForms>Monte sua viagem</TitleForms>
+        <TitleForms>Personalize sua viagem</TitleForms>
         <span>
           Oferecemos experiências personalizadas, com isso, preencha os campos
           abaixo, nos informando as condições ideais para propormos a você a
@@ -133,6 +140,17 @@ const MonteSuaViagem = () => {
                 disabled={!dataSaida}
                 min={dataSaida}
               />
+            </GridContainer>
+            <GridContainer>
+              <div style={{ padding: "15px 0 0", margin: "0 10px" }}>
+                <CheckboxInput
+                  key={"Checklis-personalizado"}
+                  listData={opcoesDePersonalizacao}
+                  Title={"Personalize seu pacote"}
+                  setmessageCheck={setmessageCheck}
+                  messageCheck={messageCheck}
+                />
+              </div>
             </GridContainer>
           </BoxForm>
 

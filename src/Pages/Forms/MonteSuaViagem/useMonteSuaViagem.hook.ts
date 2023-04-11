@@ -10,6 +10,8 @@ export const useMonteSuaViagem = () => {
   const [showAlert, setShowAlert] = React.useState<IpropsAlert>();
   // Alert
 
+  const [messageCheck, setmessageCheck] = React.useState([]);
+
   // ButtonLoad
   const [showButtonLoad, setShowButtonLoad] = React.useState<boolean>(false);
   // ButtonLoad
@@ -62,6 +64,12 @@ export const useMonteSuaViagem = () => {
     ];
   }, []);
 
+  const opcoesDePersonalizacao = [
+    { title: "Passagens aereas", subscrition: "", type: "passagens" },
+    { title: "Locação de veiculos", subscrition: "", type: "veiculos" },
+    { title: "Reserva de hoteis", subscrition: "", type: "hoteis" },
+  ];
+
   const handleSubmit = (val: any) => {
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
@@ -75,6 +83,7 @@ export const useMonteSuaViagem = () => {
       tipoTransporte,
       destino,
       localEmbarque,
+      opcoesPersonalizacao: messageCheck,
       dataSaida,
       dataRetorno,
       isNew: true,
@@ -121,7 +130,12 @@ export const useMonteSuaViagem = () => {
 
     showAlert,
 
+    opcoesDePersonalizacao,
+
     showButtonLoad,
+
+    messageCheck,
+    setmessageCheck,
 
     setNome,
     setEmail,

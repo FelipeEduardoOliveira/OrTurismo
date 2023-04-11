@@ -10,7 +10,7 @@ const HowDoesItWork = () => {
     return MockHowDoesItWork.map((item, index) => {
       return (
         <Link to={`/formulario/${item.link}`}>
-          <CardBanner key={item.title} item={item} className={`div${index}`} />;
+          <CardBanner key={item.title} item={item} className={`div${index}`} />
         </Link>
       );
     });

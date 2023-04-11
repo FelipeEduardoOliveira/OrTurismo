@@ -5,7 +5,7 @@ import VoceViaja from "../../Assets/viagem-color.png";
 
 export const MockHowDoesItWork = [
   {
-    title: "Monte sua viagem",
+    title: "Personalize sua viagem",
     text:
       "Ao optar pelo serviço de personalização de viagens, a gente se conhece, você me explica seus objetivos e o que deseja e não deseja no seu roteiro. Pode ser uma viagem a dois, lua de mel, em família, com amigos, grupo, etc.",
     icon: BatePapoIcon,
