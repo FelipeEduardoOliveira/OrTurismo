@@ -11,17 +11,17 @@ export const ContainerHowDoesItWork = styled.div`
 `;
 
 export const ContainerBanner = styled.div`
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, fr));
+  align-items: start;
+
+  grid-template-columns: repeat(4, minmax(300px, fr));
 
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 900px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   /* .div0{
     grid-row-start: 1;
@@ -97,21 +97,21 @@ export const TitleCardBanner = styled.h3`
   font-size: 20px;
 `;
 export const TextCardBanner = styled.span`
-  padding: 15px 0;
+  /* padding: 15px 0; */
   letter-spacing: 1px;
   line-height: 26px;
-  font-size: 18px;
+  font-size: 20px;
 `;
 
 export const ContainerNewLogo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
   border-radius: 100%;
-  width: 180px;
+  width: 200px;
   height: 180px;
   padding: 20px;
-  background-color: aliceblue;
   color: black;
 `;

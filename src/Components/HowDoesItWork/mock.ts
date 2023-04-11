@@ -1,48 +1,37 @@
-import BatePapoIcon from "../../Assets/bater-papo-color.png";
-import DesignViagem from "../../Assets/portfolio-color.png";
-import ApresentacaoProposta from "../../Assets/apresentacao-color.png";
-import VoceViaja from "../../Assets/viagem-color.png";
+import MonteSuaViagem from "../../Assets/monte-sua-viagem.png";
+import QuemSomos from "../../Assets/quem-somos.png";
+import Blog from "../../Assets/blog.png";
 
 export const MockHowDoesItWork = [
   {
     title: "Personalize sua viagem",
     text:
       "Ao optar pelo serviço de personalização de viagens, a gente se conhece, você me explica seus objetivos e o que deseja e não deseja no seu roteiro. Pode ser uma viagem a dois, lua de mel, em família, com amigos, grupo, etc.",
-    icon: BatePapoIcon,
+    icon: MonteSuaViagem,
     linearColor:
       "90deg, rgba(0,204,227,1) 0%, rgba(75,168,179,1) 49%, rgba(97,118,120,1) 100%",
     hexColor: "#00cce3",
-    link: "monte-sua-viagem",
+    link: "formulario/monte-sua-viagem",
   },
   {
-    title: "Passagens aereas",
+    title: "Quem somos",
     text:
       "Buscarei os melhores fornecedores do turismo para a sua viagem ser no mínimo excelente. As melhores opções de aéreo, hotéis, passeios, etc, de acordo com o seu perfil e objetivos.",
-    icon: DesignViagem,
+    icon: QuemSomos,
     linearColor:
       "90deg, rgba(0,199,196,1) 0%, rgba(113,195,194,1) 49%, rgba(91,96,96,1) 100%",
     hexColor: "#00c7c4",
-    link: "passagens-aereas",
+    link: "quem-somos",
   },
   {
-    title: "Locação de veiculos",
+    title: "Blog",
     text:
       "Apresento a melhor proposta de viagem para você. Se estiver de acordo, seguimos com o contrato e pagamento dos serviços de interesse.",
-    icon: ApresentacaoProposta,
+    icon: Blog,
     linearColor:
       "90deg, rgba(168,154,215,1) 0%, rgba(116,112,131,1) 49%, rgba(39,34,56,1) 100%",
     hexColor: "#a89ad7",
-    link: "locacao-de-veiculos",
-  },
-  {
-    title: "Reserva de hoteis",
-    text:
-      "Você viaja e se diverte. Caso precise de qualquer suporte durante a viagem, poderá contar com nosso canal de atendimento 24 horas.",
-    icon: VoceViaja,
-    linearColor:
-      "90deg, rgba(114,105,163,1) 0%, rgba(81,71,136,1) 49%, rgba(28,26,40,1) 100%",
-    hexColor: "#7269a3",
-    link: "reserva-de-hoteis",
+    link: "blog",
   },
 ];
 
